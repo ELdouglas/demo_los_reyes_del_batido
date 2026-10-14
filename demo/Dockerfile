@@ -6,7 +6,7 @@ COPY . .
 
 # Dar permisos de ejecución al gradlew y compilar
 RUN chmod +x gradlew
-RUN ./gradlew bootJar -x test
+RUN ./gradlew bootJar -x test --stacktrace
 
 # Fase de ejecución final
 FROM eclipse-temurin:17-jre-jammy
